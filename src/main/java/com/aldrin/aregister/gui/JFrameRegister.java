@@ -675,6 +675,7 @@ public class JFrameRegister extends javax.swing.JFrame implements MouseListener,
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
         JDialogSchoolYear sy = new JDialogSchoolYear(this, true);
         sy.setVisible(true);
+        comboBoxSchoolYear();
     }//GEN-LAST:event_jMenuItem11ActionPerformed
 
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
