@@ -27,7 +27,7 @@ private DecimalFormat df = new DecimalFormat("##,##0.00");
     public void addTuition(Tuition day) {
         try {
             getDBConn();
-            java.sql.PreparedStatement ps = getCon().prepareStatement("INSERT INTO TUITION (ID,DAY) VALUES  (?,?) ");
+            java.sql.PreparedStatement ps = getCon().prepareStatement("INSERT INTO TUITION (ID,TUITION_FEE) VALUES  (?,?) ");
             ps.setLong(1, getMaxId());
             ps.setFloat(2, day.getTuitionFee());
             ps.execute();
