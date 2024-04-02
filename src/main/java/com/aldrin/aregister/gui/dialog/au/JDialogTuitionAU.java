@@ -30,8 +30,7 @@ public class JDialogTuitionAU extends javax.swing.JDialog {
         setTitle("New");
         this.title = "New";
         jButton1.setIcon(new FlatSVGIcon("svg/save.svg", 24, 24));
-        jTextFieldTuitionFee.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "DAY");
-        jTextFieldTuitionFee.setText(String.valueOf(tuition.getTuitionFee()));
+        jTextFieldTuitionFee.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "TUITION FEE");
         
     }
     
@@ -44,7 +43,7 @@ public class JDialogTuitionAU extends javax.swing.JDialog {
         this.tuition = tuition;
         jButton1.setIcon(new FlatSVGIcon("svg/edit.svg", 24, 24));
         jButton1.setText(title);
-        jTextFieldTuitionFee.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "DAY");
+        jTextFieldTuitionFee.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "TUITION FEE");
         jTextFieldTuitionFee.setText(String.valueOf(tuition.getTuitionFee()));
     }
     
@@ -57,7 +56,7 @@ public class JDialogTuitionAU extends javax.swing.JDialog {
         this.title = title;
         jButton1.setIcon(new FlatSVGIcon("svg/delete.svg", 24, 24));
         jButton1.setText(title);
-        jTextFieldTuitionFee.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "DAY");
+        jTextFieldTuitionFee.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "TUITION FEE");
         jTextFieldTuitionFee.setText(String.valueOf(tuition.getTuitionFee()));
         
     }

@@ -39,7 +39,7 @@ public class JDialogTuition extends javax.swing.JDialog implements MouseListener
         this.jFrameRegister = jFrameRegister;
         initComponents();
         setTable();
-        selectDay();
+        selectTuition();
         jTextFieldSearch.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Search");
         //icon
         jTextFieldSearch.putClientProperty(FlatClientProperties.TEXT_FIELD_LEADING_ICON, new FlatSVGIcon("svg/search.svg", 24, 24));
@@ -197,15 +197,15 @@ public class JDialogTuition extends javax.swing.JDialog implements MouseListener
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNewActionPerformed
-        JDialogDayAU semesterAU = new JDialogDayAU(jFrameRegister, true);
+        JDialogTuitionAU semesterAU = new JDialogTuitionAU(jFrameRegister, true);
         semesterAU.setVisible(true);
-        selectDay();
+        selectTuition();
     }//GEN-LAST:event_jButtonNewActionPerformed
 
     private void jButtonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateActionPerformed
         JDialogTuitionAU semesterAU = new JDialogTuitionAU(jFrameRegister, true, tuition, "Update");
         semesterAU.setVisible(true);
-        selectDay();
+        selectTuition();
         jButtonDelete.setEnabled(false);
         jButtonUpdate.setEnabled(false);
     }//GEN-LAST:event_jButtonUpdateActionPerformed
@@ -295,7 +295,7 @@ public class JDialogTuition extends javax.swing.JDialog implements MouseListener
     private TuitionDAOImpl tuitionDAOImpl = new TuitionDAOImpl();
     private ArrayList<Tuition> tuitionList;
 
-    private void selectDay() {
+    private void selectTuition() {
         tableModel.setRowCount(0);
         tuitionList = tuitionDAOImpl.selectTuition();
         tableModel.setRowCount(0);
