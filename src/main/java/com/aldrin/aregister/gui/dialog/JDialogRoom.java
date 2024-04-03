@@ -36,7 +36,7 @@ public class JDialogRoom extends javax.swing.JDialog implements MouseListener {
         this.jFrameRegister = jFrameRegister;
         initComponents();
         setTable();
-        selectCategory();
+        selectRoom();
         jTextFieldSearch.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Search");
         //icon
         jTextFieldSearch.putClientProperty(FlatClientProperties.TEXT_FIELD_LEADING_ICON, new FlatSVGIcon("svg/search.svg", 24, 24));
@@ -201,13 +201,13 @@ public class JDialogRoom extends javax.swing.JDialog implements MouseListener {
     private void jButtonNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNewActionPerformed
         JDialogRoomAU categoryAU = new JDialogRoomAU(jFrameRegister, true);
         categoryAU.setVisible(true);
-        selectCategory();
+        selectRoom();
     }//GEN-LAST:event_jButtonNewActionPerformed
 
     private void jButtonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateActionPerformed
         JDialogRoomAU categoryAU = new JDialogRoomAU(jFrameRegister, true, room, "Update");
         categoryAU.setVisible(true);
-        selectCategory();
+        selectRoom();
         jButtonDelete.setEnabled(false);
         jButtonUpdate.setEnabled(false);
     }//GEN-LAST:event_jButtonUpdateActionPerformed
@@ -215,6 +215,7 @@ public class JDialogRoom extends javax.swing.JDialog implements MouseListener {
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
         JDialogRoomAU categoryAU = new JDialogRoomAU(jFrameRegister, true, "Delete", room);
         categoryAU.setVisible(true);
+        selectRoom();
         jButtonDelete.setEnabled(false);
         jButtonUpdate.setEnabled(false);
     }//GEN-LAST:event_jButtonDeleteActionPerformed
@@ -272,7 +273,7 @@ public class JDialogRoom extends javax.swing.JDialog implements MouseListener {
     private RoomDAOImpl roomDAOImpl = new RoomDAOImpl();
     private ArrayList<Room> roomList;
 
-    private void selectCategory() {
+    private void selectRoom() {
         tableModel.setRowCount(0);
         roomList = roomDAOImpl.selectRoom();
         tableModel.setRowCount(0);

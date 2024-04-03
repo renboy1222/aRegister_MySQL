@@ -38,7 +38,7 @@ public class JDialogCitizenship extends javax.swing.JDialog implements MouseList
         this.jFrameRegister = jFrameRegister;
         initComponents();
         setTable();
-        selectDay();
+        selectCitizenship();
         jTextFieldSearch.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Search");
         //icon
         jTextFieldSearch.putClientProperty(FlatClientProperties.TEXT_FIELD_LEADING_ICON, new FlatSVGIcon("svg/search.svg", 24, 24));
@@ -203,13 +203,13 @@ public class JDialogCitizenship extends javax.swing.JDialog implements MouseList
     private void jButtonNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNewActionPerformed
         JDialogCitizenshipAU semesterAU = new JDialogCitizenshipAU(jFrameRegister, true);
         semesterAU.setVisible(true);
-        selectDay();
+        selectCitizenship();
     }//GEN-LAST:event_jButtonNewActionPerformed
 
     private void jButtonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateActionPerformed
         JDialogCitizenshipAU semesterAU = new JDialogCitizenshipAU (jFrameRegister, true, citizenship, "Update");
         semesterAU.setVisible(true);
-        selectDay();
+        selectCitizenship();
         jButtonDelete.setEnabled(false);
         jButtonUpdate.setEnabled(false);
     }//GEN-LAST:event_jButtonUpdateActionPerformed
@@ -271,7 +271,7 @@ public class JDialogCitizenship extends javax.swing.JDialog implements MouseList
     private CitizenshipDAOImpl citizenshipDAOImpl = new CitizenshipDAOImpl();
     private ArrayList<Citizenship> citizenshipList;
 
-    private void selectDay() {
+    private void selectCitizenship() {
         tableModel.setRowCount(0);
         citizenshipList = citizenshipDAOImpl.selectCitizenship();
         tableModel.setRowCount(0);

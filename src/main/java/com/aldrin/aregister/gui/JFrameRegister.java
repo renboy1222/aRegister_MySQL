@@ -684,10 +684,18 @@ public class JFrameRegister extends javax.swing.JFrame implements MouseListener,
     }//GEN-LAST:event_jMenuItem12ActionPerformed
 
     private void jButtonNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNewActionPerformed
-        JDialogEnrollStudent enrollStudent = new JDialogEnrollStudent(this, true);
-        enrollStudent.setVisible(true);
-        ComboBoxList syId = (ComboBoxList) this.jComboBoxSchoolYear.getSelectedItem();
-        selectClassEnrolled(syId.getId());
+        if (schoolYearDAOImpl.getCurrentSchoolYearIDAndTuitionID().getId() == null) {
+            JOptionPane.showMessageDialog(null, "Check the current school year and current date if match to the enrollment.", "WARNING!!", JOptionPane.WARNING_MESSAGE);
+            return;
+        } else if (classOfferDAOImpl.getCurrentClassOfferId() < 1) {
+            JOptionPane.showMessageDialog(this, "No class offer to this current school year.", "WARNING!!", JOptionPane.PLAIN_MESSAGE);
+            return;
+        } else {
+            JDialogEnrollStudent enrollStudent = new JDialogEnrollStudent(this, true);
+            enrollStudent.setVisible(true);
+            ComboBoxList syId = (ComboBoxList) this.jComboBoxSchoolYear.getSelectedItem();
+            selectClassEnrolled(syId.getId());
+        }
     }//GEN-LAST:event_jButtonNewActionPerformed
 
     private void jTextFieldSearchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldSearchKeyReleased
@@ -754,7 +762,10 @@ public class JFrameRegister extends javax.swing.JFrame implements MouseListener,
     }//GEN-LAST:event_jMenuItem16ActionPerformed
 
     private void jButtonRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegisterActionPerformed
-        if (classOfferDAOImpl.getCurrentClassOfferId() <1) {
+        if (schoolYearDAOImpl.getCurrentSchoolYearIDAndTuitionID().getId() == null) {
+            JOptionPane.showMessageDialog(null, "Check the current school year and current date if match to the enrollment.", "WARNING!!", JOptionPane.WARNING_MESSAGE);
+            return;
+        } else if (classOfferDAOImpl.getCurrentClassOfferId() < 1) {
             JOptionPane.showMessageDialog(this, "No class offer to this current school year.", "WARNING!!", JOptionPane.PLAIN_MESSAGE);
             return;
         } else {

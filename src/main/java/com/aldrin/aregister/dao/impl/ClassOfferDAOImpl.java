@@ -374,10 +374,10 @@ public class ClassOfferDAOImpl extends DBConnection implements ClassOfferDAO {
             PreparedStatement statement;
             ResultSet rs;
             SchoolYearDAOImpl syID = new SchoolYearDAOImpl();
-            if (syID.getCurrentSchoolYearIDAndTuitionID().getId() == null) {
-                JOptionPane.showMessageDialog(null, "Check the current school year and current date if match to the enrollment.", "WARNING!!", JOptionPane.WARNING_MESSAGE);
-                return 0L;
-            } else {
+//            if (syID.getCurrentSchoolYearIDAndTuitionID().getId() == null) {
+//                JOptionPane.showMessageDialog(null, "Check the current school year and current date if match to the enrollment.", "WARNING!!", JOptionPane.WARNING_MESSAGE);
+//                return 0L;
+//            } else {
                 statement = getCon().prepareStatement("SELECT * FROM CLASS_OFFER WHERE CLASS_OFFER.DELETED =FALSE AND CLASS_OFFER.SCHOOL_YEAR_ID =" + syID.getCurrentSchoolYearIDAndTuitionID().getId() + " ORDER BY CLASS_OFFER.CLASS_CODE ASC ");
                 rs = statement.executeQuery();
                 while (rs.next()) {
@@ -392,7 +392,7 @@ public class ClassOfferDAOImpl extends DBConnection implements ClassOfferDAO {
                 rs.close();
                 statement.close();
                 closeConnection();
-            }
+//            }
 
         } catch (Exception ex) {
             ex.printStackTrace();

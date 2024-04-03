@@ -215,6 +215,7 @@ public class JDialogSchoolYear extends javax.swing.JDialog implements MouseListe
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
         JDialogSchoolYearAU syAU = new JDialogSchoolYearAU(jFrameRegister, true, "Delete", schoolYear);
         syAU.setVisible(true);
+        selectSchoolYear();
         jButtonDelete.setEnabled(false);
         jButtonUpdate.setEnabled(false);
     }//GEN-LAST:event_jButtonDeleteActionPerformed

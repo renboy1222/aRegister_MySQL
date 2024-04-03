@@ -36,7 +36,7 @@ public class JDialogRole extends javax.swing.JDialog implements MouseListener {
         this.jFrameRegister = jFrameRegister;
         initComponents();
         setTable();
-        selectCourse();
+        selectRole();
         jTextFieldSearch.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Search");
         //icon
         jTextFieldSearch.putClientProperty(FlatClientProperties.TEXT_FIELD_LEADING_ICON, new FlatSVGIcon("svg/search.svg",24,24));
@@ -201,13 +201,13 @@ public class JDialogRole extends javax.swing.JDialog implements MouseListener {
     private void jButtonNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNewActionPerformed
         JDialogRoleAU roleAU = new JDialogRoleAU(jFrameRegister, true);
         roleAU.setVisible(true);
-        selectCourse();
+        selectRole();
     }//GEN-LAST:event_jButtonNewActionPerformed
 
     private void jButtonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateActionPerformed
         JDialogRoleAU roleAU = new JDialogRoleAU(jFrameRegister, true, role, "Update");
         roleAU.setVisible(true);
-        selectCourse();
+        selectRole();
         jButtonDelete.setEnabled(false);
         jButtonUpdate.setEnabled(false);
     }//GEN-LAST:event_jButtonUpdateActionPerformed
@@ -215,6 +215,7 @@ public class JDialogRole extends javax.swing.JDialog implements MouseListener {
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
         JDialogRoleAU roleAU = new JDialogRoleAU(jFrameRegister, true, "Delete", role);
         roleAU.setVisible(true);
+        selectRole();
         jButtonDelete.setEnabled(false);
         jButtonUpdate.setEnabled(false);
     }//GEN-LAST:event_jButtonDeleteActionPerformed
@@ -265,7 +266,7 @@ public class JDialogRole extends javax.swing.JDialog implements MouseListener {
     private RoleDAOImpl roleDAOImpl = new RoleDAOImpl();
     private ArrayList<Role> roleList;
 
-    private void selectCourse() {
+    private void selectRole() {
         tableModel.setRowCount(0);
         roleList = roleDAOImpl.selectRole();
         tableModel.setRowCount(0);

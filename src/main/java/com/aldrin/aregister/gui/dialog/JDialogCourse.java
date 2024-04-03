@@ -36,7 +36,7 @@ public class JDialogCourse extends javax.swing.JDialog implements MouseListener 
         this.jFrameRegister = jFrameRegister;
         initComponents();
         setTable();
-        selectCategory();
+        selectCourse();
         jTextFieldSearch.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Search");
         //icon
         jTextFieldSearch.putClientProperty(FlatClientProperties.TEXT_FIELD_LEADING_ICON, new FlatSVGIcon("svg/search.svg", 24, 24));
@@ -201,13 +201,13 @@ public class JDialogCourse extends javax.swing.JDialog implements MouseListener 
     private void jButtonNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNewActionPerformed
         JDialogCourseAU categoryAU = new JDialogCourseAU(jFrameRegister, true);
         categoryAU.setVisible(true);
-        selectCategory();
+        selectCourse();
     }//GEN-LAST:event_jButtonNewActionPerformed
 
     private void jButtonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateActionPerformed
         JDialogCourseAU categoryAU = new JDialogCourseAU(jFrameRegister, true, category, "Update");
         categoryAU.setVisible(true);
-        selectCategory();
+        selectCourse();
         jButtonDelete.setEnabled(false);
         jButtonUpdate.setEnabled(false);
     }//GEN-LAST:event_jButtonUpdateActionPerformed
@@ -272,7 +272,7 @@ public class JDialogCourse extends javax.swing.JDialog implements MouseListener 
     private CourseDAOImpl categoryDAOImpl = new CourseDAOImpl();
     private ArrayList<Course> courseList;
 
-    private void selectCategory() {
+    private void selectCourse() {
         tableModel.setRowCount(0);
         courseList = categoryDAOImpl.selectCourse();
         tableModel.setRowCount(0);

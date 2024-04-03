@@ -217,6 +217,7 @@ public class JDialogSubject extends javax.swing.JDialog implements MouseListener
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
         JDialogSubjectAU categoryAU = new JDialogSubjectAU(jFrameRegister, true, "Delete", subject);
         categoryAU.setVisible(true);
+        selectCategory();
         jButtonDelete.setEnabled(false);
         jButtonUpdate.setEnabled(false);
     }//GEN-LAST:event_jButtonDeleteActionPerformed

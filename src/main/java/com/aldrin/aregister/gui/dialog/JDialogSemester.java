@@ -215,6 +215,7 @@ public class JDialogSemester extends javax.swing.JDialog implements MouseListene
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
         JDialogSemesterAU semesterAU = new JDialogSemesterAU(jFrameRegister, true, "Delete", semester);
         semesterAU.setVisible(true);
+        selectSemester();
         jButtonDelete.setEnabled(false);
         jButtonUpdate.setEnabled(false);
     }//GEN-LAST:event_jButtonDeleteActionPerformed

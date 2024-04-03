@@ -217,6 +217,7 @@ public class JDialogTime extends javax.swing.JDialog implements MouseListener {
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
         JDialogTimeAU timeAU = new JDialogTimeAU(jFrameRegister, true, "Delete", time);
         timeAU.setVisible(true);
+        selectTime();
         jButtonDelete.setEnabled(false);
         jButtonUpdate.setEnabled(false);
     }//GEN-LAST:event_jButtonDeleteActionPerformed

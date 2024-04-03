@@ -40,7 +40,7 @@ public class JDialogInstructor extends javax.swing.JDialog implements MouseListe
         this.jFrameRegister = jFrameRegister;
         initComponents();
         setTable();
-        selectStudent();
+        selectInstructor();
         jTextFieldSearch.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Search");
         //icon
         jTextFieldSearch.putClientProperty(FlatClientProperties.TEXT_FIELD_LEADING_ICON, new FlatSVGIcon("svg/search.svg", 24, 24));
@@ -205,13 +205,13 @@ public class JDialogInstructor extends javax.swing.JDialog implements MouseListe
     private void jButtonNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNewActionPerformed
         JDialogInstructorAU roleAU = new JDialogInstructorAU(jFrameRegister, true);
         roleAU.setVisible(true);
-        selectStudent();
+        selectInstructor();
     }//GEN-LAST:event_jButtonNewActionPerformed
 
     private void jButtonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateActionPerformed
         JDialogInstructorAU roleAU = new JDialogInstructorAU(jFrameRegister, true, instructor, "Update");
         roleAU.setVisible(true);
-        selectStudent();
+        selectInstructor();
         jButtonDelete.setEnabled(false);
         jButtonUpdate.setEnabled(false);
 
@@ -220,7 +220,7 @@ public class JDialogInstructor extends javax.swing.JDialog implements MouseListe
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
         JDialogInstructorAU roleAU = new JDialogInstructorAU(jFrameRegister, true, "Delete", instructor);
         roleAU.setVisible(true);
-        selectStudent();
+        selectInstructor();
         jButtonDelete.setEnabled(false);
         jButtonUpdate.setEnabled(false);
     }//GEN-LAST:event_jButtonDeleteActionPerformed
@@ -379,7 +379,7 @@ public DefaultTableModel tableModel = new DefaultTableModel(new Object[]{"ID",  
 //"ID", "COURSE ID", "CIVIL STATUS ID", "CITIZENSHIP ID", "FIRST NAME", "MIDDLE NAME", "SURNAME", "COURSE", "CIVIL STATUS",
 //    "GENDER", "DATE OF BIRTH", "CITIZENSHIP", "MOBILE", "EMAIL", "ADDRESS"
 
-    private void selectStudent() {
+    private void selectInstructor() {
         tableModel.setRowCount(0);
         instructorList = instructorDAOImpl.selectInstructor();
         tableModel.setRowCount(0);
