@@ -145,7 +145,7 @@ public class JDialogSemester extends javax.swing.JDialog implements MouseListene
         jPanel3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 10, 10));
 
         jButtonNew.setIcon(new FlatSVGIcon("svg/add.svg",24,24));
-        jButtonNew.setText("New");
+        jButtonNew.setText("Add");
         jButtonNew.setMargin(new java.awt.Insets(2, 2, 3, 2));
         jButtonNew.setPreferredSize(new java.awt.Dimension(80, 32));
         jButtonNew.addActionListener(new java.awt.event.ActionListener() {
