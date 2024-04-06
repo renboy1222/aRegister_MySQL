@@ -250,7 +250,7 @@ public class JDialogClassOffer extends javax.swing.JDialog implements MouseListe
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1329, Short.MAX_VALUE)
+            .addGap(0, 1263, Short.MAX_VALUE)
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -263,7 +263,7 @@ public class JDialogClassOffer extends javax.swing.JDialog implements MouseListe
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.NORTH);
 
-        setSize(new java.awt.Dimension(1345, 605));
+        setSize(new java.awt.Dimension(1279, 605));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

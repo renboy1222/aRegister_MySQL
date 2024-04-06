@@ -486,7 +486,7 @@ public class JDialogEnrollStudent extends javax.swing.JDialog implements ActionL
     private void jButtonAddSubjectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddSubjectActionPerformed
         addSubjectToTable();
         autoCalulateUnits();
-        jButtonRegister.setEnabled(true);
+        
     }//GEN-LAST:event_jButtonAddSubjectActionPerformed
 
     private void jButtonRemoveSubjectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRemoveSubjectActionPerformed
@@ -831,6 +831,7 @@ public class JDialogEnrollStudent extends javax.swing.JDialog implements ActionL
         if (jTableClassOffer.getRowCount() == 0) {
             tableModel.addRow(new Object[]{co.getId(), jTableClassOffer.getRowCount() + 1, co.getClass_code(), co.getSubject().getSubject(), instructor, co.getRoom().getRoom(),
                 co.getDay().getDay(), co.getTime().getTime(), co.getSubject().getUnit()});
+            jButtonRegister.setEnabled(true);
             return;
         } else {
             //test for duplicate subject
@@ -841,8 +842,10 @@ public class JDialogEnrollStudent extends javax.swing.JDialog implements ActionL
                     multipleProduct = false;
                     String subject = jTableClassOffer.getValueAt(i, 3).toString();
                     JOptionPane.showMessageDialog(this, "Subject " + subject + " is already added.", "WARNING MESSAGE", JOptionPane.WARNING_MESSAGE);
+                    jButtonRegister.setEnabled(false);
                     break itemCounter;
                 } else {
+                    jButtonRegister.setEnabled(true);
                     multipleProduct = true;
                 }
             }

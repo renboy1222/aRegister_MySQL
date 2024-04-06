@@ -195,7 +195,7 @@ public class JFrameRegister extends javax.swing.JFrame implements MouseListener,
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1376, Short.MAX_VALUE)
+            .addGap(0, 1352, Short.MAX_VALUE)
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -230,7 +230,7 @@ public class JFrameRegister extends javax.swing.JFrame implements MouseListener,
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 554, Short.MAX_VALUE)
+            .addGap(0, 495, Short.MAX_VALUE)
         );
 
         jPanel3.add(jPanel11, java.awt.BorderLayout.WEST);
@@ -245,7 +245,7 @@ public class JFrameRegister extends javax.swing.JFrame implements MouseListener,
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 554, Short.MAX_VALUE)
+            .addGap(0, 495, Short.MAX_VALUE)
         );
 
         jPanel3.add(jPanel12, java.awt.BorderLayout.EAST);
@@ -390,7 +390,7 @@ public class JFrameRegister extends javax.swing.JFrame implements MouseListener,
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 60, Short.MAX_VALUE)
         );
 
         jPanel2.add(jPanel13, java.awt.BorderLayout.WEST);
@@ -628,7 +628,7 @@ public class JFrameRegister extends javax.swing.JFrame implements MouseListener,
 
         setJMenuBar(jMenuBar1);
 
-        setSize(new java.awt.Dimension(1392, 745));
+        setSize(new java.awt.Dimension(1368, 686));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
