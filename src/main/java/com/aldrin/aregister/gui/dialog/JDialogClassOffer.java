@@ -173,7 +173,7 @@ public class JDialogClassOffer extends javax.swing.JDialog implements MouseListe
         jPanel3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 10, 5));
 
         jButtonNew.setIcon(new FlatSVGIcon("svg/add.svg",24,24));
-        jButtonNew.setText("New");
+        jButtonNew.setText("Add");
         jButtonNew.setMargin(new java.awt.Insets(2, 2, 3, 2));
         jButtonNew.setMaximumSize(new java.awt.Dimension(90, 42));
         jButtonNew.setMinimumSize(new java.awt.Dimension(90, 42));
